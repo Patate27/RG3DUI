@@ -338,7 +338,8 @@ run_command ./monitor.sh
 run_command ./jobscheduler.sh
 
 #Start monitor refresh 
-run_command chmod +x schedule_job.sh
+download_and_make_executable https://raw.githubusercontent.com/dismaster/RG3DUI/main/jobscheduler.sh jobscheduler.sh
+#run_command chmod +x schedule_job.sh
 run command screen -dmS Scheduler ./schedule_job.sh
 
 # Success message
