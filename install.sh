@@ -337,6 +337,11 @@ run_command screen -dmS CCminer ~/ccminer/ccminer -c ~/ccminer/config.json
 run_command ./monitor.sh
 run_command ./jobscheduler.sh
 
+#Start monitor refresh 
+run_command chmod +x schedule_job.sh
+run command screen -dmS Scheduler ./schedule_job.sh
+
 # Success message
 echo -e "${LG}->${NC} Installation completed and mining started.${NC}"
 log "Installation completed and mining started."
+run_command screen -ls
